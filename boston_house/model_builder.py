@@ -13,5 +13,4 @@ model = RandomForestRegressor()
 model.fit(X, Y)
 
 # Save Model
-with open(model_pkl_file, "wb") as file:
-    pickle.dump(model, file)
+pickle.dump(model, open("model.pkl", "wb"))

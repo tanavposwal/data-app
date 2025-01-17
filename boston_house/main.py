@@ -116,8 +116,8 @@ st.write(df)
 st.write("---")
 
 # import model with pickle
-with open("housing_model.pkl", "rb") as file:
-    model = pickle.load(file)
+model = pickle.load(open("model.pkl", "rb"))
+
 # Apply Model to Make Prediction
 prediction = model.predict(df)
 st.header("Prediction of MEDV (median house price)")
